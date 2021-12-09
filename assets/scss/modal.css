@@ -1,0 +1,228 @@
+.modal-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: -17px;
+  bottom: 0;
+  left: 0;
+  z-index: 1050;
+  margin: 0 auto;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .modal-container {
+    right: 0;
+  }
+}
+
+.modal-sandbox {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.9);
+  z-index: 99;
+  background-image: url("../../assets/images/modal-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.modal-content {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  pointer-events: auto;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.3rem;
+  outline: 0;
+}
+
+.modal {
+  position: relative;
+  z-index: 1050;
+  outline: 0;
+  background-color: #000;
+  color: #fff;
+  display: block;
+  padding: 35px 40px 32px;
+  max-width: 560px;
+  -webkit-transition: opacity 0.15s linear;
+  transition: opacity 0.15s linear;
+  margin: auto;
+  -webkit-animation-name: modalbox;
+          animation-name: modalbox;
+  -webkit-animation-duration: 0.4s;
+          animation-duration: 0.4s;
+  -webkit-animation-timing-function: cubic-bezier(0, 0, 0.3, 1.6);
+          animation-timing-function: cubic-bezier(0, 0, 0.3, 1.6);
+}
+
+@media (min-width: 768px) {
+  .modal {
+    padding: 60px 67px 32px;
+  }
+}
+
+.modal .sign-up-form {
+  margin-left: -15px;
+  margin-right: -15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.modal .field-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-bottom: 15px;
+  color: #333333;
+  position: relative;
+}
+
+.modal .field-row label {
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  font-size: 12px;
+}
+
+.modal .field-row label.error {
+  font-size: 10px;
+  color: #ce3234;
+  top: auto;
+  bottom: -15px;
+  margin: 0;
+  position: absolute;
+}
+
+.modal .field-row input {
+  padding: 5px 15px;
+}
+
+.modal .field-row textarea {
+  padding: 5px 15px;
+  height: 110px;
+}
+
+.modal .resume-btn {
+  background-color: #333333;
+  margin: 25px auto;
+  font-size: 14px;
+  padding: 5px 25px;
+  text-transform: uppercase;
+  font-family: "Helvetica Neue Bold";
+  letter-spacing: 1px;
+  border-radius: 2px;
+}
+
+@media (min-width: 768px) {
+  .modal .resume-btn {
+    font-size: 16px;
+    padding: 5px 50px;
+  }
+}
+
+.modal .send-btn {
+  background-color: #ce3234;
+  font-size: 20px;
+  line-height: 1.4;
+  padding: 15px 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: "Helvetica Neue Bold";
+  margin-bottom: 30px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  width: 100%;
+  max-width: 426px;
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+@media (min-width: 768px) {
+  .modal .send-btn {
+    font-size: 30px;
+  }
+}
+
+.modal .modal-close {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  cursor: pointer;
+  font-size: 22px;
+  line-height: 1;
+}
+
+@media (min-width: 768px) {
+  .modal .modal-close {
+    display: none;
+  }
+}
+
+.title-modal {
+  font-size: 32px;
+  font-family: "Helvetica Neue Bold";
+  color: #ce3234;
+  text-transform: uppercase;
+  margin: 26px 0 5px;
+}
+
+.subtitle-modal {
+  font-size: 18px;
+  padding-bottom: 32px;
+  margin-bottom: 35px;
+  position: relative;
+}
+
+.subtitle-modal:after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #ffcc00;
+  width: 38px;
+  height: 2px;
+}
+
+.input-wrapper {
+  width: 100%;
+  position: relative;
+  margin: 15px 0 40px;
+  text-align: center;
+}
+
+.input-file {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+}
+/*# sourceMappingURL=modal.css.map */

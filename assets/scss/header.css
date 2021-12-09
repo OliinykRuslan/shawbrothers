@@ -313,6 +313,11 @@
   }
 }
 
+.active-menu {
+  max-height: 100vh;
+  overflow-y: hidden;
+}
+
 @media (max-width: 1023px) {
   .active-menu .overlay:after {
     content: "";

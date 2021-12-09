@@ -33,6 +33,24 @@ body {
   overflow-x: hidden;
 }
 
+@media (min-width: 1024px) {
+  html,
+  body {
+    overflow-x: visible;
+  }
+}
+
+html.modal-open,
+body.modal-open {
+  overflow: hidden;
+}
+
+html.modal-open .modal-container,
+body.modal-open .modal-container {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
 a,
 a:hover,
 a:focus {
@@ -1101,5 +1119,30 @@ ol {
   font-size: 14px;
   color: #404040;
   margin-top: 100px;
+}
+
+.bg-red {
+  background-color: #ce3234;
+}
+
+.text-wrap {
+  font-size: 14px;
+  font-family: "Libre Baskerville", serif;
+}
+
+@media (min-width: 768px) {
+  .text-wrap {
+    font-size: 22px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .text-wrap {
+    font-size: 30px;
+  }
+}
+
+.text-wrap .text-item {
+  max-width: 1350px;
 }
 /*# sourceMappingURL=style.css.map */
