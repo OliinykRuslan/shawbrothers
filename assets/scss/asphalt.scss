@@ -1,0 +1,170 @@
+.section-asphalt {
+    background-image: url("../../assets/images/asphalt/asphalt-bg.png");
+    background-image: -webkit-image-set(
+        url("../../assets/images/asphalt/webp/asphalt-bg.webp") 1x
+    );
+    background-repeat: no-repeat;
+    background-size: cover;
+    .section-wrap {
+        display: flex;
+        @media (max-width: 1023px) {
+            flex-wrap: wrap;
+        }
+    }
+    .section-sidebar {
+        width: 100%;
+        @media (min-width: 1024px) {
+            max-width: 58%;
+            flex: 1 0 58%;
+            padding-right: 25px;
+        }
+        @media (min-width: 1280px) {
+            max-width: 50%;
+            flex: 1 0 50%;
+        }
+        @media (min-width: 1536px) {
+            max-width: 40%;
+            flex: 1 0 40%;
+            padding-right: 50px;
+        }
+        .sidebar-wrap {
+            background-color: #ce3234;
+            background-image: url("../../assets/images/bg.png");
+            background-position: 75% 0;
+            background-repeat: no-repeat;
+            font-size: 16px;
+            color: #fff;
+            padding: 50px 15px 25px;
+            @media (min-width: 575px) {
+                padding: 25px 50px 25px;
+            }
+            @media (min-width: 768px) {
+                font-size: 20px;
+                padding: 28px 15px 85px 60px;
+            }
+            @media (min-width: 1024px) {
+                margin-left: -50px;
+                text-align: left;
+            }
+            @media (min-width: 1280px) {
+                margin-left: -90px;
+                padding: 28px 15px 85px 105px;
+            }
+            @media (min-width: 1536px) {
+            }
+            @media (min-width: 1600px) {
+                padding: 28px 15px 85px 60px;
+            }
+            .btn {
+                margin: 50px auto 0;
+                @media (min-width: 1024px) {
+                    margin: 78px 0 0;
+                }
+            }
+        }
+        .title-sidebar {
+            font-family: "Helvetica Neue Bold";
+            color: #ffcc00;
+            margin-bottom: 16px;
+            font-size: 20px;
+            letter-spacing: 4px;
+            @media (min-width: 768px) {
+                font-size: 32px;
+            }
+        }
+        .plant-item {
+            display: flex;
+            margin-bottom: 18px;
+            letter-spacing: 2px;
+            line-height: 1.2;
+            .txt {
+                letter-spacing: 0px;
+            }
+        }
+        .plant-title {
+            font-family: "Helvetica Neue Bold";
+            text-transform: uppercase;
+            margin-right: 5px;
+        }
+    }
+    .description {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 22px;
+        line-height: 1.2;
+        font-family: "Helvetica Neue Bold";
+        padding: 35px 0;
+        @media (min-width: 1024px) {
+            font-size: 34px;
+            margin-top: -60px;
+            padding: 0;
+        }
+        a {
+            display: inline-block;
+            color: #ce3234;
+        }
+    }
+    .description-title {
+        font-size: 38px;
+        margin-bottom: 28px;
+        letter-spacing: 5px;
+        word-spacing: 5px;
+        @media (min-width: 1024px) {
+            font-size: 60px;
+        }
+    }
+    .form-container {
+        background-image: url("../../assets/images/asphalt/form-bg.png");
+        background-image: -webkit-image-set(
+            url("../../assets/images/asphalt/webp/form-bg.webp") 1x
+        );
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 50px 0;
+        @media (min-width: 1024px) {
+            padding: 75px 0 53px;
+        }
+        .description {
+            color: #fff;
+            line-height: 1.5;
+            letter-spacing: 7px;
+            word-spacing: 5px;
+            padding: 0 25px;
+            font-family: "Helvetica Neue Bold";
+            order: 1;
+            font-size: 38px;
+            @media (min-width: 1024px) {
+                padding: 65px 25px 0;
+                font-size: 60px;
+                order: 2;
+            }
+            @media (min-width: 1536px) {
+                font-size: 80px;
+            }
+            a {
+                color: #ffcc00;
+                display: block;
+            }
+        }
+        .section-sidebar {
+            order: 2;
+            @media (min-width: 1024px) {
+                padding: 0;
+                max-width: 35%;
+                flex: 1 0 35%;
+                order: 1;
+            }
+        }
+        .title-form {
+            color: #fff;
+        }
+    }
+    .contact-form {
+        label {
+            color: #fff;
+        }
+    }
+}

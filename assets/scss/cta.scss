@@ -1,0 +1,53 @@
+.cta {
+    background-image: url("../images/what-we-do/cta-bg.png");
+    background-image: -webkit-image-set(
+        url("../images/what-we-do/webp/cta-bg.webp") 1x
+    );
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    padding: 150px 0 75px;
+    text-align: center;
+    color: #fff;
+    @media (min-width: 1024px) {
+        padding: 430px 0 180px;
+    }
+    .title-section {
+        font-size: 26px;
+        letter-spacing: 12px;
+        @media (min-width: 768px) {
+            font-size: 54px;
+        }
+        @media (min-width: 1400px) {
+            font-size: 78px;
+        }
+    }
+    .btn {
+        margin-top: 38px;
+        justify-content: center;
+        @media (min-width: 768px) {
+            font-size: 38px;
+            justify-content: flex-end;
+            font-family: "Helvetica Neue Bold";
+            font-weight: 300;
+            font-style: normal;
+        }
+        img {
+            max-width: 100px;
+            @media (min-width: 1024px) {
+                max-width: 100%;
+            }
+        }
+    }
+}
+.asphalt {
+    .cta {
+        background-image: url("../../../assets/images/asphalt/cta-bg.png");
+        background-image: -webkit-image-set(
+            url("../../assets/images/asphalt/webp/cta-bg.webp") 1x
+        );
+        @media (min-width: 1024px) {
+            padding: 172px 0 156px;
+        }
+    }
+}

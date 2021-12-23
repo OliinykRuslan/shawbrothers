@@ -1,58 +1,74 @@
 .videotube-modal-overlay {
-  color: #fff;
-  display: none;
-  z-index: 995;
-  opacity: 0;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  position: fixed;
-  text-align: center;
-  background-color: rgba(000, 000, 000, 0.8);
+    color: #fff;
+    display: none;
+    z-index: 995;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    position: fixed;
+    text-align: center;
+    background-color: rgba(000, 000, 000, 0.8);
 }
 
 #videotube-modal-container {
-  z-index: 999;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 #videotube-modal {
-  text-align: center;
-  box-shadow: 0 0 40px #333;
-  max-width: 85%;
+    text-align: center;
+    box-shadow: 0 0 40px #333;
+    max-width: 85%;
 }
 #videotube-modal-loading {
-  position: fixed;
-  z-index: 997;
-  font-size: 1.5em;
-  top: 49%;
-  width: 5%;
-  text-align: center;
-  left: 45%;
+    position: fixed;
+    z-index: 997;
+    font-size: 1.5em;
+    top: 49%;
+    width: 5%;
+    text-align: center;
+    left: 45%;
 }
 #videotube-modal-close {
-  position: fixed;
-  right: 15px;
-  top: 15px;
-  padding: 3px 13px;
-  z-index: 997;
-  font-size: 25px;
-  border-radius: 3px;
-  cursor: pointer;
-  z-index: 9991;
-  -webkit-transition-duration: 0.1s;
-  -o-transition-duration: 0.1s;
-  -moz-transition-duration: 0.1s;
-  transition-duration: 0.1s;
+    position: fixed;
+    right: 15px;
+    top: 15px;
+    padding: 3px 13px;
+    z-index: 997;
+    font-size: 25px;
+    border-radius: 3px;
+    cursor: pointer;
+    z-index: 9991;
+    -webkit-transition-duration: 0.1s;
+    -o-transition-duration: 0.1s;
+    -moz-transition-duration: 0.1s;
+    transition-duration: 0.1s;
+}
+#videotube-modal-close:before,
+#videotube-modal-close:after {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    content: "";
+    height: 3px;
+    width: 100%;
+    background-color: #fff;
+}
+#videotube-modal-close:before {
+    transform: rotate(45deg);
+}
+#videotube-modal-close:after {
+    transform: rotate(-45deg);
 }
 #videotube-modal-close:hover {
-  opacity: 0.9;
+    opacity: 0.9;
 }

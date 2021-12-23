@@ -1,0 +1,74 @@
+.cta {
+  background-image: url("../images/what-we-do/cta-bg.png");
+  background-image: -webkit-image-set(url("../images/what-we-do/webp/cta-bg.webp") 1x);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  padding: 150px 0 75px;
+  text-align: center;
+  color: #fff;
+}
+
+@media (min-width: 1024px) {
+  .cta {
+    padding: 430px 0 180px;
+  }
+}
+
+.cta .title-section {
+  font-size: 26px;
+  letter-spacing: 12px;
+}
+
+@media (min-width: 768px) {
+  .cta .title-section {
+    font-size: 54px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .cta .title-section {
+    font-size: 78px;
+  }
+}
+
+.cta .btn {
+  margin-top: 38px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .cta .btn {
+    font-size: 38px;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    font-family: "Helvetica Neue Bold";
+    font-weight: 300;
+    font-style: normal;
+  }
+}
+
+.cta .btn img {
+  max-width: 100px;
+}
+
+@media (min-width: 1024px) {
+  .cta .btn img {
+    max-width: 100%;
+  }
+}
+
+.asphalt .cta {
+  background-image: url("../../../assets/images/asphalt/cta-bg.png");
+  background-image: -webkit-image-set(url("../../assets/images/asphalt/webp/cta-bg.webp") 1x);
+}
+
+@media (min-width: 1024px) {
+  .asphalt .cta {
+    padding: 172px 0 156px;
+  }
+}
+/*# sourceMappingURL=cta.css.map */

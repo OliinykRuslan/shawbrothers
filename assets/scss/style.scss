@@ -1,3 +1,15 @@
+@import url(../css/header.css);
+@import url(../css/fonts.css);
+// @import url(https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css);
+
+// @import url(../css/modal.css);
+// @import url(../css/get-to-work/hero.css);
+// @import url(../css/get-to-work/get-to-work.css);
+
+// @import url(../css/cta.css);
+// @import url(../css/what-we-do/hero.css);
+// @import url(../css/what-we-do/slider-section.css);
+
 *,
 *::after,
 *::before {
@@ -58,6 +70,29 @@ ol {
 .btn {
     &:hover {
         color: #ffcc00;
+    }
+    &.call-btn {
+        border: 3px solid #ffcc00;
+        border-radius: 20px;
+        padding: 10px 15px;
+        text-transform: uppercase;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: max-content;
+        font-family: "Helvetica Neue Bold";
+        font-size: 18px;
+        @media (min-width: 1024px) {
+            font-size: 30px;
+            padding: 14px 35px;
+        }
+        img {
+            max-width: 25px;
+            @media (min-width: 575px) {
+                max-width: 100%;
+            }
+        }
     }
 }
 
@@ -236,6 +271,27 @@ ol {
         z-index: -1;
     }
 }
+.close-btn {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    &::before,
+    &::after {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        content: "";
+        height: 3px;
+        width: 100%;
+        background-color: #fff;
+    }
+    &::before {
+        transform: rotate(45deg);
+    }
+    &::after {
+        transform: rotate(-45deg);
+    }
+}
 // search form
 .top-search-form {
     opacity: 0;
@@ -289,6 +345,9 @@ ol {
     justify-content: center;
     padding: 15px;
     background-image: url("../../assets/images/started-bg.png");
+    background-image: -webkit-image-set(
+        url("../../assets/images/webp/started-bg.webp") 1x
+    );
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -336,6 +395,9 @@ ol {
 // hero section
 .section-hero {
     background-image: url("../../assets/images/hero-bg.png");
+    background-image: -webkit-image-set(
+        url("../../assets/images/webp/hero-bg.webp") 1x
+    );
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -382,6 +444,62 @@ ol {
             }
             &:hover {
                 opacity: 0.8;
+            }
+        }
+    }
+    .what-we-do & {
+        background-image: url("../../assets/images/what-we-do/hero-bg.png");
+        background-image: -webkit-image-set(
+            url("../../assets/images/what-we-do/webp/hero-bg.webp") 1x
+        );
+    }
+    .asphalt & {
+        background-image: url("../../assets/images/asphalt/hero-bg.png");
+        background-image: -webkit-image-set(
+            url("../../assets/images/asphalt/webp/hero-bg.webp") 1x
+        );
+        .subtitle-page {
+            letter-spacing: 1px;
+            word-spacing: -2px;
+        }
+        .btn {
+            margin: 15px 0 0;
+            color: #ce3234;
+            justify-content: flex-end;
+            font-size: 22px;
+            &:hover {
+                color: #ffcc00;
+            }
+        }
+    }
+    .what-we-do &,
+    .asphalt & {
+        background-position: 0% -150px;
+        padding: 100px 0 35px;
+        font-family: "Helvetica Neue Bold";
+        @media (min-width: 1024px) {
+            padding: 454px 0 35px;
+            background-position: center;
+        }
+        .title-page {
+            font-size: 38px;
+            text-align: left;
+            margin: 0 0 40px;
+            color: #000;
+            text-shadow: none;
+            text-transform: uppercase;
+            letter-spacing: 3.5px;
+            max-width: 100%;
+        }
+        .subtitle-page {
+            font-size: 14px;
+            color: #333;
+            font-family: "Libre Baskerville", serif;
+            @media (min-width: 768px) {
+                font-size: 16px;
+            }
+            @media (min-width: 1024px) {
+                font-size: 20px;
             }
         }
     }
@@ -438,6 +556,9 @@ ol {
     padding: 75px 0;
     text-align: center;
     background-image: url("../../assets/images/services-bg.png");
+    background-image: -webkit-image-set(
+        url("../../assets/images/webp/services-bg.webp") 1x
+    );
     background-repeat: no-repeat;
     background-size: cover;
     font-family: "Helvetica Neue Bold";
@@ -488,15 +609,27 @@ ol {
         }
         &.services {
             background-image: url("../../assets/images/services-image.png");
+            background-image: -webkit-image-set(
+                url("../../assets/images/webp/services-image.webp") 1x
+            );
         }
         &.materials {
             background-image: url("../../assets/images/materials-image.png");
+            background-image: -webkit-image-set(
+                url("../../assets/images/webp/materials-image.webp") 1x
+            );
         }
         &.asphalt {
             background-image: url("../../assets/images/asphalt-image.png");
+            background-image: -webkit-image-set(
+                url("../../assets/images/webp/asphalt-image.webp") 1x
+            );
         }
         &.rentals {
             background-image: url("../../assets/images/rentals-image.png");
+            background-image: -webkit-image-set(
+                url("../../assets/images/webp/rentals-image.webp") 1x
+            );
         }
         .services-title {
             font-size: 26px;
@@ -534,6 +667,9 @@ ol {
 // beyond-brothers section
 .beyond-brothers {
     background-image: url("../../assets/images/beyond-brothers-bg.png");
+    background-image: -webkit-image-set(
+        url("../../assets/images/webp/beyond-brothers-bg.webp") 1x
+    );
     background-repeat: no-repeat;
     background-size: cover;
     padding: 94px 0 77px;
@@ -574,6 +710,9 @@ ol {
 // solar-farm section
 .solar-farm {
     background-image: url("../../assets/images/solar-farm-bg.png");
+    background-image: -webkit-image-set(
+        url("../../assets/images/webp/solar-farm-bg.webp") 1x
+    );
     background-repeat: no-repeat;
     background-size: cover;
     @media (max-width: 767px) {
@@ -618,6 +757,9 @@ ol {
 // shaw-park section
 .shaw-park {
     background-image: url("../../assets/images/shaw-park-bg.png");
+    background-image: -webkit-image-set(
+        url("../../assets/images/webp/shaw-park-bg.webp") 1x
+    );
     background-repeat: no-repeat;
     background-size: cover;
     color: #fff;
@@ -657,6 +799,9 @@ ol {
 // central-power
 .central-power {
     background-image: url("../../assets/images/central-power-bg.png");
+    background-image: -webkit-image-set(
+        url("../../assets/images/webp/central-power-bg.webp") 1x
+    );
     background-repeat: no-repeat;
     background-size: cover;
     padding: 60px 0 67px;
@@ -835,5 +980,133 @@ ol {
     }
     .text-item {
         max-width: 1350px;
+    }
+}
+
+.form {
+    margin-left: -15px;
+    margin-right: -15px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.field-row {
+    display: flex;
+    flex-direction: column;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 15px;
+    color: #333333;
+    position: relative;
+    label {
+        color: #fff;
+        text-transform: uppercase;
+        margin-bottom: 5px;
+        font-size: 12px;
+        &.error {
+            font-size: 10px;
+            color: #ce3234;
+            top: auto;
+            bottom: -15px;
+            margin: 0;
+            position: absolute;
+        }
+    }
+    input {
+        padding: 5px 15px;
+    }
+    textarea {
+        padding: 5px 15px;
+        height: 110px;
+    }
+}
+.send-btn {
+    background-color: #ce3234;
+    font-size: 20px;
+    line-height: 1.4;
+    padding: 15px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: "Helvetica Neue Bold";
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
+    width: 100%;
+    max-width: 426px;
+    margin: 0 auto;
+    border-radius: 2px;
+    @media (min-width: 768px) {
+        font-size: 30px;
+    }
+}
+
+// attach file button
+.input-wrapper {
+    width: 100%;
+    position: relative;
+    margin: 15px 0 40px;
+    text-align: center;
+}
+
+.input-file {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+}
+
+.form-wrap {
+    background-image: url("../../assets/images/get-to-work/opportunities-sidebar-bg.png");
+    background-repeat: no-repeat;
+    background-position: 0 -50px;
+    padding-top: 62px;
+    background-size: auto 70%;
+}
+.contact-form {
+    @media (min-width: 1024px) {
+        max-width: 380px;
+    }
+    .title-form {
+        color: #ce3234;
+        font-size: 24px;
+        padding: 0 15px;
+        text-transform: uppercase;
+        font-family: "Helvetica Neue Bold";
+        margin-bottom: 28px;
+    }
+    .field-row {
+        margin-bottom: 35px;
+        label {
+            color: #444;
+            &.error {
+                color: #ce3234;
+                white-space: nowrap;
+            }
+        }
+        input,
+        textarea {
+            border: 1px solid #ddd;
+            font-size: 14px;
+            &.error {
+                border: 1px solid #ce3234;
+            }
+        }
+        input {
+            padding: 6px 10px;
+        }
+        textarea {
+            height: 148px;
+        }
+    }
+    .send-btn {
+        color: #fff;
+        max-width: max-content;
+        margin: 0 15px;
+        font-size: 20px;
+        padding: 11px 16px;
+        letter-spacing: 1px;
+        &:hover {
+            color: #ffcc00;
+        }
     }
 }

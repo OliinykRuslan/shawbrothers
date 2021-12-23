@@ -1,0 +1,55 @@
+.get-to-work {
+    .section-hero {
+        background-image: url("../../../assets/images/get-to-work/hero-bg.png");
+        background-image: -webkit-image-set(
+            url("../../images/get-to-work/webp/hero-bg.webp") 1x
+        );
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        padding: 50px 0 70px;
+        @media (min-width: 1024px) {
+            padding: 215px 0 70px;
+        }
+        .title-page {
+            font-size: 26px;
+            box-shadow: none;
+            text-shadow: none;
+            letter-spacing: 9px;
+            width: 100%;
+            max-width: 100%;
+            text-transform: uppercase;
+            text-align: center;
+            font-family: "Helvetica Neue Bold";
+            color: #ce3234;
+            margin-bottom: 74px;
+            position: relative;
+            max-width: max-content;
+            padding-bottom: 15px;
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                margin: auto;
+                width: 94%;
+                height: 2px;
+                background-color: #ce3234;
+            }
+            @media (min-width: 768px) {
+                font-size: 64px;
+                padding-bottom: 33px;
+            }
+            @media (min-width: 1200px) {
+                font-size: 100px;
+            }
+        }
+        .hero-logo {
+            max-width: 250px;
+            @media (min-width: 768px) {
+                max-width: 100%;
+            }
+        }
+    }
+}

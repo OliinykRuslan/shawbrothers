@@ -5,26 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex, nofollow" />
-    <title>shawbrothers</title>
+    <title>Shawbrothers</title>
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="assets/scss/header.css" type="text/css">
-    <link rel="stylesheet" href="assets/scss/style.css" type="text/css">
-    <link rel="stylesheet" href="assets/css/fonts.css" type="text/css">
 
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css">
     <link rel="stylesheet" href="assets/css/videotube.css" type="text/css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/tailwindcss@2/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body>
 	<!-- header -->
     <nav class="main-nav">
         <div class="container mx-auto">
             <div class="head-menu top-search-parent flex items-center">
-                <a href="#" class="logo"><img src="assets/images/logo.png" alt="shawbrothers-logo"></a>
+                <a href="#" class="logo">
+                    <picture>
+                        <source srcset="assets/images/webp/logo.webp" type="image/webp">
+                        <img src="assets/images/logo.png" alt="shawbrothers-logo">
+                    </picture>
+                </a>
                 
                 <ul class="main-menu nav toggleMenu">
                     <!--Toggleable Link-->
@@ -201,7 +203,7 @@
                                 <path d="M 20.5 6 C 12.515556 6 6 12.515562 6 20.5 C 6 28.484438 12.515556 35 20.5 35 C 23.773158 35 26.788919 33.893018 29.220703 32.050781 L 38.585938 41.414062 A 2.0002 2.0002 0 1 0 41.414062 38.585938 L 32.050781 29.220703 C 33.893017 26.788918 35 23.773156 35 20.5 C 35 12.515562 28.484444 6 20.5 6 z M 20.5 10 C 26.322685 10 31 14.677319 31 20.5 C 31 23.295711 29.914065 25.820601 28.148438 27.697266 A 2.0002 2.0002 0 0 0 27.701172 28.144531 C 25.824103 29.912403 23.29771 31 20.5 31 C 14.677315 31 10 26.322681 10 20.5 C 10 14.677319 14.677315 10 20.5 10 z"></path>
                             </svg>
                             <!-- close icon -->
-                            <span class="close-btn item-ico">&#10006;</span>
+                            <span class="close-btn item-ico"></span>
                         </a>
                     </div>
                     <!-- mobile btn -->
@@ -295,8 +297,14 @@
                 </p>
             </div>
         </div>
-        <img class="img-item" src="assets/images/solar-farm.png" alt="">
-        <img class="img-item" src="assets/images/solar-farm-2.png" alt="">
+        <picture>
+            <source srcset="assets/images/webp/solar-farm.webp" type="image/webp">
+            <img src="assets/images/solar-farm.png" alt="shawbrothers-logo">
+        </picture>
+        <picture>
+            <source srcset="assets/images/webp/solar-farm-2.webp" type="image/webp">
+            <img src="assets/images/solar-farm-2.png" alt="shawbrothers-logo">
+        </picture>
         <div>
             <div class="solar-wrap">
                 <p class="mb-10">
@@ -339,7 +347,10 @@
                 <div class="inner-container">
                     <h2 class="title-section">Shaw Brothers has been one of CMP’s “<span class="secondary">Go To</span>” Contractors for many years.</h2>
                     <p class="txt"> — Marc D. Geaumont, Portland Service Center Manager, Central Maine Power Co.</p>
-                    <img class="mx-auto" src="assets/images/cmp-ico.png" alt="">
+                    <picture>
+                        <source srcset="assets/images/webp/cmp-ico.webp" type="image/webp">
+                        <img src="assets/images/cmp-ico.png" alt="shawbrothers-logo">
+                    </picture>
                 </div>
             </div>
         </div>
@@ -350,7 +361,10 @@
             <div class="footer-wrap">
                 <div class="logo-col">
                     <a href="#" class="f-logo">
-                        <img class="mx-auto" src="assets/images/f_logo.png" alt="">
+                        <picture>
+                            <source srcset="assets/images/webp/f_logo.webp" type="image/webp">
+                            <img src="assets/images/f_logo.png" alt="shawbrothers-logo">
+                        </picture>
                     </a>
                     <ul class="f-list">
                         <li><a href="#">AggrEgates</a></li>
@@ -364,7 +378,7 @@
                     <a href="#" class="btn contact-btn">Contact us</a>
                     <div class="list-group">
                         <ul>
-                            <li class="list-title">Shaw Brothers Construction</li>
+                            <li><h4 class="list-title">Shaw Brothers Construction</h4></li>
                             <li>P.O. Box 69</li>
                             <li>341 Mosher Rd (Rt. 237)</li>
                             <li>Gorham, Maine 04038</li>
@@ -372,7 +386,7 @@
                             <li><a href="tel:2078396239">Fax: (207) 839-6239</a></li>
                         </ul>
                         <ul>
-                            <li class="list-title">Materials</li>
+                            <li><h4 class="list-title">Materials</h4></li>
                             <li><a href="tel:2078392552">Tel: (207) 892-6363</a></li>
                             <li><a href="tel:2078396239">Fax: (207) 892-5167</a></li>
                         </ul>

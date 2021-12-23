@@ -56,74 +56,174 @@ $(document).ready(function () {
         $("html").css({ "overflow-y": "auto" });
     });
 
-    //rule for phone number
-    $.validator.addMethod(
-        "phoneno",
-        function (value, element) {
-            return (
-                value.match(/^\+(?:[0-9] ?){6,14}[0-9]$/) ||
-                value.match(/^(?:[0-9] ?){6,14}[0-9]$/)
-            );
-        },
-        "Enter Valid  phone number"
-    );
-
-    //rule for start date
-    $.validator.addMethod("birth", function (value, element) {
-        var year = value.split("/");
-        if (
-            value.match(/^\d\d?\/\d\d?\/\d\d\d\d$/) &&
-            parseInt(year[2]) <= 2019
-        )
-            return true;
-        else return false;
-    });
-
-    // modal validation
-    $(".validateJs").each(function () {
-        $(this).validate({
-            rules: {
-                required: "required",
-
-                firstName: {
-                    required: true,
-                },
-                lastName: {
-                    required: true,
-                },
-                email: {
-                    required: true,
-                    email: true,
-                },
-                phone: {
-                    required: true,
-                    phoneno: true,
-                },
-                city: {
-                    required: true,
-                },
-                exprctedsalary: {
-                    required: true,
-                },
-                startdate: {
-                    required: true,
-                    startdate: true,
-                },
+    if ($(".validateJs").length) {
+        //rule for phone number
+        $.validator.addMethod(
+            "phoneno",
+            function (value, element) {
+                return (
+                    value.match(/^\+(?:[0-9] ?){6,14}[0-9]$/) ||
+                    value.match(/^(?:[0-9] ?){6,14}[0-9]$/)
+                );
             },
-            messages: {
-                required: "This field is required",
-                firstName: "Please enter a valid first name",
-                lastName: "Please enter a valid last name",
-                email: "Please enter a valid email address",
-                phone: "Please enter a valid phone",
-                city: "Please enter a valid city",
-                // exprctedsalary: '',
-                startdate: "Please enter a valid date",
-            },
-            submitHandler: function (form) {
-                // for demo
-                form.submit();
-            },
+            "Enter Valid  phone number"
+        );
+
+        //rule for start date
+        $.validator.addMethod("birth", function (value, element) {
+            var year = value.split("/");
+            if (
+                value.match(/^\d\d?\/\d\d?\/\d\d\d\d$/) &&
+                parseInt(year[2]) <= 2019
+            )
+                return true;
+            else return false;
+        });
+
+        // validation
+        $(".validateJs").each(function () {
+            $(this).validate({
+                rules: {
+                    required: "required",
+                    firstName: {
+                        required: true,
+                    },
+                    lastName: {
+                        required: true,
+                    },
+                    email: {
+                        required: true,
+                        email: true,
+                    },
+                    phone: {
+                        required: true,
+                        phoneno: true,
+                    },
+                    city: {
+                        required: true,
+                    },
+                    exprctedsalary: {
+                        required: true,
+                    },
+                    startdate: {
+                        required: true,
+                        startdate: true,
+                    },
+                    contactStory: {
+                        required: true,
+                    },
+                },
+                messages: {
+                    required: "This field is required",
+                    firstName: "Please enter a valid first name",
+                    lastName: "Please enter a valid last name",
+                    email: "Please enter a valid email address",
+                    phone: "Please enter a valid phone",
+                    city: "Please enter a valid city",
+                    startdate: "Please enter a valid date",
+                },
+                onfocusout: function (element) {
+                    this.element(element);
+                },
+                submitHandler: function (form) {
+                    form.submit();
+                },
+            });
+        });
+    }
+
+    if ($(".sliderWrap").length) {
+        // slider
+        $(".slider-wrap .slider-for").slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            fade: true,
+            asNavFor: ".slider-nav",
+        });
+        $(".slider-wrap .slider-nav").slick({
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            asNavFor: ".slider-for",
+            dots: false,
+            focusOnSelect: true,
+            arrows: false,
+            // infinite: true,
+            cssEase: "linear",
+        });
+
+        // slider 2
+        $(".slider-wrap .slider-for-2").slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            fade: true,
+            asNavFor: ".slider-nav-2",
+        });
+        $(".slider-wrap .slider-nav-2").slick({
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            asNavFor: ".slider-for-2",
+            dots: false,
+            focusOnSelect: true,
+            arrows: false,
+            infinite: true,
+            cssEase: "linear",
+        });
+
+        // slider 3
+        $(".slider-wrap .slider-for-3").slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            fade: true,
+            asNavFor: ".slider-nav-3",
+        });
+        $(".slider-wrap .slider-nav-3").slick({
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            asNavFor: ".slider-for-3",
+            dots: false,
+            focusOnSelect: true,
+            arrows: false,
+            infinite: true,
+            cssEase: "linear",
+        });
+    }
+
+    // tab
+    $(function () {
+        var tab = $(".tabs .tabs-items > div");
+        // tab.hide().filter(":first").show();
+        // tab.css("display", "none").filter(":first").css("display", "block");
+
+        tab.removeClass("is-show").filter(":first").addClass("is-show");
+
+        $(".tabs .tabs-nav a")
+            .click(function () {
+                // tab.hide();
+                // tab.filter(this.hash).show();
+
+                // tab.css("display", "none");
+                // tab.filter(this.hash).css("display", "block");
+
+                tab.removeClass("is-show");
+                tab.filter(this.hash).addClass("is-show");
+
+                $(".tabs .tabs-nav a").addClass("is-hidden");
+                $(".tabs .tabs-nav a").removeClass("is-active");
+
+                $(this).addClass("is-active");
+                $(this).removeClass("is-hidden");
+                return false;
+            })
+            .filter(":first");
+        // .click();
+
+        // back btn
+        $(".project-btn .btn").click(function (e) {
+            e.preventDefault();
+            $(this).removeClass("is-active");
+            $(".tabs .tabs-nav a").removeClass("is-active is-hidden");
+            $(".slider-sidebar #tab-1.tabs-item").css("display", "block");
+            tab.removeClass("is-show").filter(":first").addClass("is-show");
         });
     });
 });
