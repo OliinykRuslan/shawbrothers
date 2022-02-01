@@ -1110,3 +1110,47 @@ ol {
         }
     }
 }
+
+.pagination {
+    .page-item {
+        color: #ce3234;
+        font-size: 18px;
+    }
+    .active {
+        color: #ffcc00;
+        background-color: #ce3234;
+    }
+}
+
+.arrow-ico {
+    position: relative;
+    display: block;
+    transition: all 0.3s ease;
+    width: 17px;
+    height: 12px;
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        background-color: #ce3234;
+        height: 1px;
+        width: 10px;
+        top: calc(50% - 2px);
+    }
+    &::before {
+        right: 0;
+        transform: rotate(-45deg);
+    }
+    &::after {
+        left: 0;
+        transform: rotate(45deg);
+    }
+    &.is-active {
+        &::before {
+            transform: rotate(45deg);
+        }
+        &::after {
+            transform: rotate(-45deg);
+        }
+    }
+}

@@ -1464,4 +1464,54 @@ ol {
 .contact-form .send-btn:hover {
   color: #ffcc00;
 }
+
+.pagination .page-item {
+  color: #ce3234;
+  font-size: 18px;
+}
+
+.pagination .active {
+  color: #ffcc00;
+  background-color: #ce3234;
+}
+
+.arrow-ico {
+  position: relative;
+  display: block;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  width: 17px;
+  height: 12px;
+}
+
+.arrow-ico::before, .arrow-ico::after {
+  content: "";
+  position: absolute;
+  background-color: #ce3234;
+  height: 1px;
+  width: 10px;
+  top: calc(50% - 2px);
+}
+
+.arrow-ico::before {
+  right: 0;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.arrow-ico::after {
+  left: 0;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.arrow-ico.is-active::before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.arrow-ico.is-active::after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
 /*# sourceMappingURL=style.css.map */
